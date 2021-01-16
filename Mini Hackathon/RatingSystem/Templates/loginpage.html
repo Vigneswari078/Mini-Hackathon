@@ -1,0 +1,33 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN PAGE</title>
+        <link rel="stylesheet" type="text/css" href="{% static '/styles/style1.css' %}">
+        <script type="text/javascript" src="{% static '/js/EyeOnclick.js' %}"></script>
+    </head>
+    <body>
+        {% block content %}
+            <div class="main">
+                <form>
+                    <h1 class="login">Login</h1>
+                    <div class="text-box">
+                        <span id="user" class="fa fa-user" ></span>
+                        <input name="name" type="text" placeholder="Employee Id" size="27">
+                    </div>
+                    <div class="text-box">
+                        <span id="user" class="fa fa-lock" ></span>  
+                        <input id="pass" name="password" type="password" placeholder="Password" size="27">
+                        <i id="eye" class="fa fa-eye" onclick="viewPassword()"></i>
+                    </div>
+                    <button class="btn">Sign in</button>
+                    <p><a href="reset_password" class="fp_link">Forgot password?</a></p>
+                    <p >Don't have an account?
+                        <a href="#" class="na_link">Create new account</a>
+                    </p>
+                </form>
+            </div>
+        {% endblock %}
+    </body>
+</html>
