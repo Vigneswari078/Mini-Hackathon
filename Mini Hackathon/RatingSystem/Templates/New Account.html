@@ -1,0 +1,74 @@
+{% load static %}
+<html>
+	<head>
+		<title>New Account</title>
+		<link  rel="stylesheet" href="{% static '/styles/NewAccount.css' %}"></link>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+	</head>
+	
+	<body>
+		{% block content %}
+		<div class="bg">
+			<h1>New Account</h1>
+			<form class="box">
+				<div class="imgcontainer">
+					<img src="{% static '/images/pic 18.jpg' %}" alt="Avatar" class="avatar">
+				</div>
+				
+				<div class="input-box">
+				<i class="fa fa-user-circle"></i>
+				<input type="text" placeholder="Name" name="Name" required>
+				</div>
+				
+				<div class="input-box">
+				<i class="fa fa-envelope"></i>
+				<input type="email" placeholder="email" name="Email" required>
+				</div>
+				
+				<div class="input-box">
+				<i class="fa fa-id-card"></i>
+				<input type="text" placeholder="Employee Id" name="employeeId" required>
+				</div>
+				
+				<div class="input-box">
+				<i class="fa fa-mobile" ></i>
+				<input type="text" placeholder="Phone Number" name="phoneNumber" required>
+				</div>
+				
+				<div class="input-box">
+				<i class="fa fa-key"></i>
+				<input type="password" id="pass" placeholder="Enter Password" name="password" required>
+				<span class="eye" onclick="viewPassword1()"> 
+					<i id="show" class="fa fa-eye"></i>
+					<i id="hide" class="fa fa-eye-slash"></i>
+				</span>
+				</div>
+				
+				<div class="input-box">
+				<input type="date" placeholder="DOB  DD-MM-YYYY" name="dob" required>
+				</div>
+				<button type="submit" class="buttn">Submit</button>
+			</form>
+		</div>
+		<script type="text/javascript">
+            function viewPassword1(){
+				var x = document.getElementById("pass");
+				const y = document.getElementById("show");
+				const z = document.getElementById("hide");
+				
+				if(x.type === "password") {
+					x.type = "text";
+					y.style.display = "block";
+					z.style.display = "none";
+				}
+				else {
+					x.type = "password";
+					y.style.display = "none";
+					z.style.display = "block";
+				}
+			}
+	
+		</script>
+		{% endblock %}
+	</body>
+</html>

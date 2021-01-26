@@ -1,14 +1,14 @@
 {% load static %}
-{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>LOGIN PAGE</title>
         <link rel="stylesheet" type="text/css" href="{% static '/styles/style1.css' %}">
-        <script type="text/javascript" src="{% static '/js/EyeOnclick.js' %}"></script>
     </head>
     <body>
         {% block content %}
+        <div class="content">
+            <h2>MSME</h2>
             <div class="main">
                 <form>
                     <h1 class="login">Login</h1>
@@ -22,12 +22,14 @@
                         <i id="eye" class="fa fa-eye" onclick="viewPassword()"></i>
                     </div>
                     <button class="btn">Sign in</button>
-                    <p><a href="reset_password" class="fp_link">Forgot password?</a></p>
+                    <p><a href="#" class="fp_link">Forgot password?</a></p>
                     <p >Don't have an account?
                         <a href="#" class="na_link">Create new account</a>
                     </p>
                 </form>
             </div>
+        </div>
         {% endblock %}
+        <script src="{% static '/js/EyeOnclick.js' %}"></script>
     </body>
 </html>

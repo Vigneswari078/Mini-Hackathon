@@ -1,0 +1,74 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+html,body {
+	height:100%;
+	width:100%;
+}
+.navbar {
+	padding:1% 2%;
+	font-size:20px;
+}
+.nav-item {
+	margin:auto;
+} 
+.nav-item li:hover, .nav-item li:active {
+	color:#FFFFFF
+}
+.navbar-brand {
+	margin-right:50px;
+}
+#home {
+	background:url("/static/images/pic 16.webp") no-repeat center fixed;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	display:table;
+	height:80%;
+	position:relative;
+	width:100%
+}
+.landing-text {
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+}
+.padding {
+	padding:80px 0;
+}
+.padding img {
+	width:100%;
+}
+
+footer {
+	width:100%;
+	background-color:#1C1C1C;
+	padding:5% 5% 10% 5%;
+	color:#FFFFFF;
+	opacity: 0.8;
+}
+.fa {
+	padding:15px;
+	font-size: 25px;
+	color:#FFFFFF;
+}
+.fa:hover {
+	color:#D5D5D5;
+	text-decoration:none;
+}
+#btn1, #btn2, #btn3, #btn4 {
+	display:none;
+	background-color: #1C1C1C;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 60%;
+	position:center;
+	opacity: 0.7;
+}
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover {
+	opacity: 1;
+}
+
+
